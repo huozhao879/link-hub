@@ -1,108 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-<title>Empire Czyng — Links</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070812">
+<title>Huo Zhao • Official Links</title>
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- margin:0;min-height:100vh;color:#fff;
- font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
- background:
- radial-gradient(circle at 50% -10%,rgba(255,255,255,.10),transparent 30%),
- radial-gradient(circle at 10% 90%,rgba(120,120,120,.08),transparent 30%),
- #030303;
- display:flex;justify-content:center;padding:32px 14px;overflow-x:hidden;
-}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.025),transparent 70%);animation:shine 7s linear infinite}
-.wrap{width:min(560px,100%);animation:rise .8s ease both}
-.card{
- position:relative;overflow:hidden;padding:34px 20px 22px;border-radius:30px;
- background:linear-gradient(145deg,rgba(24,24,24,.92),rgba(7,7,7,.96));
- border:1px solid rgba(255,255,255,.13);
- box-shadow:0 30px 90px rgba(0,0,0,.75),inset 0 1px rgba(255,255,255,.06);
- backdrop-filter:blur(18px)
-}
-.card:after{content:"";position:absolute;width:230px;height:230px;right:-120px;top:-130px;border-radius:50%;background:rgba(255,255,255,.06);filter:blur(5px)}
-.profile{text-align:center;position:relative;z-index:1}
-.avatar{
- width:112px;height:112px;border-radius:50%;margin:0 auto 16px;
- display:grid;place-items:center;font-size:36px;font-weight:900;letter-spacing:-2px;
- background:linear-gradient(145deg,#292929,#090909);
- border:2px solid rgba(255,255,255,.85);
- box-shadow:0 0 0 5px rgba(255,255,255,.04),0 18px 45px rgba(0,0,0,.7);
- overflow:hidden;animation:float 4s ease-in-out infinite
-}
-.avatar img{width:100%;height:100%;object-fit:cover;display:block}
-h1{margin:5px 0 6px;font-size:28px;letter-spacing:-.7px}
-.bio{margin:0 auto 24px;color:#aaa;line-height:1.55;font-size:14px;max-width:430px}
-.links{display:grid;gap:13px;position:relative;z-index:1}
-.link{
- position:relative;text-decoration:none;color:#fff;display:flex;align-items:center;gap:14px;
- padding:15px 16px;border-radius:18px;background:rgba(255,255,255,.055);
- border:1px solid rgba(255,255,255,.10);
- box-shadow:0 8px 24px rgba(0,0,0,.22);
- transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;
- animation:slide .55s ease both
-}
-.link:nth-child(2){animation-delay:.08s}.link:nth-child(3){animation-delay:.16s}.link:nth-child(4){animation-delay:.24s}.link:nth-child(5){animation-delay:.32s}
-.link:before{content:"";position:absolute;inset:0;border-radius:18px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);transform:translateX(-110%);transition:.5s}
-.link:hover{transform:translateY(-4px) scale(1.01);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.24);box-shadow:0 14px 35px rgba(0,0,0,.42)}
-.link:hover:before{transform:translateX(110%)}
-.icon{width:45px;height:45px;flex:0 0 45px;border-radius:14px;display:grid;place-items:center;background:#111;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px rgba(255,255,255,.08)}
-.icon svg{width:24px;height:24px;fill:#fff}
-.link-main{min-width:0;flex:1;text-align:left}.link-title{font-weight:750;font-size:15px}.link-sub{color:#888;font-size:12px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.arrow{color:#777;font-size:26px;transition:.25s}.link:hover .arrow{color:#fff;transform:translateX(4px)}
-.footer{text-align:center;margin-top:22px;color:#555;font-size:11px;letter-spacing:.4px}
-@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
-@keyframes slide{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-@keyframes shine{0%{transform:translateX(-30%)}100%{transform:translateX(30%)}}
-@media(max-width:480px){body{padding:14px 9px}.card{padding:27px 13px 19px;border-radius:24px}h1{font-size:25px}.avatar{width:100px;height:100px}}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#fff}
+body{min-height:100vh;display:grid;place-items:center;overflow-x:hidden;background:
+radial-gradient(circle at 50% 0%,#34245f 0,transparent 38%),
+radial-gradient(circle at 0% 100%,#102f48 0,transparent 35%),
+linear-gradient(145deg,#05060d,#0b0a16 52%,#04050a)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:
+linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:40px 40px}
+.orb{position:fixed;width:230px;height:230px;border-radius:50%;filter:blur(70px);opacity:.2;pointer-events:none}
+.o1{background:#8058d8;top:-90px;left:-100px;animation:drift 9s ease-in-out infinite}
+.o2{background:#2c91bd;right:-100px;bottom:-90px;animation:drift 12s ease-in-out infinite reverse}
+.wrap{width:min(100%,570px);padding:18px;position:relative;z-index:2}
+.card{position:relative;padding:26px 18px 20px;border:1px solid #ffffff18;border-radius:30px;
+background:linear-gradient(180deg,#17162bd9,#070914dc);backdrop-filter:blur(18px);
+box-shadow:0 28px 90px #0009,inset 0 1px #ffffff10;overflow:hidden;animation:in .8s ease both}
+.card:after{content:"";position:absolute;inset:0;border-radius:30px;pointer-events:none;
+background:linear-gradient(115deg,transparent 15%,#c3a7ff22,transparent 55%);transform:translateX(-100%);animation:shine 4.5s ease-in-out infinite}
+.hero{text-align:center;position:relative}
+.emblem{height:120px;display:grid;place-items:center;position:relative}
+.ring{position:absolute;width:106px;height:106px;border:1px solid #cbb7ff38;border-radius:50%;box-shadow:0 0 45px #9770ff25;animation:spin 16s linear infinite}
+.ring:before,.ring:after{content:"";position:absolute;border-radius:50%;inset:10px;border:1px dashed #d5c6ff2b}
+.ring:after{inset:25px;border-style:solid;border-color:#ffffff18;animation:spinr 9s linear infinite}
+.dragon{font-family:serif;font-size:57px;font-weight:700;background:linear-gradient(#fff,#c2a6ff,#6d51bb);
+-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 20px #a47bff66);animation:float 3.4s ease-in-out infinite}
+.avatar{width:55px;height:55px;margin:-3px auto 10px;border-radius:17px;display:grid;place-items:center;font-weight:800;
+letter-spacing:.08em;background:linear-gradient(145deg,#a486ff,#4a3889);border:1px solid #ffffff2b;box-shadow:0 10px 30px #6046b64d}
+h1{font-size:29px;margin:0}.sub{margin:5px 0 0;color:#c9bdf0;font-size:12px;text-transform:uppercase;letter-spacing:.23em}
+.desc{margin:11px auto 23px;max-width:390px;color:#aaa8ba;font-size:13px;line-height:1.55}
+.links{display:grid;gap:11px}.link{min-height:72px;display:flex;align-items:center;gap:13px;padding:10px 14px;
+border:1px solid #ffffff12;border-radius:19px;background:#ffffff08;color:#fff;text-decoration:none;position:relative;overflow:hidden;
+transition:.22s ease}.link:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#ffffff10,transparent 48%);transform:translateX(-110%);transition:.5s}
+.link:hover{transform:translateY(-3px) scale(1.01);border-color:#c6adff55;background:#ffffff0d;box-shadow:0 14px 35px #0005}
+.link:hover:before{transform:translateX(110%)}.link:active{transform:scale(.95);transition:.06s}
+.icon{width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;font-size:20px;font-weight:900;background:#ffffff0e}
+.y .icon{background:#ff47471c}.t .icon{background:#4de0d01a}.w .icon{background:#4dde821a}
+.txt{min-width:0;flex:1;display:flex;flex-direction:column;gap:3px}.txt strong{font-size:15px}.txt small{font-size:11px;color:#9d9bab;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arrow{color:#aaa4b6;font-size:20px}.link:hover .arrow{color:#fff;transform:translate(3px,-3px)}
+.note{text-align:center;margin:16px 0 0;color:#6f6d7d;font-size:10px}
+.particles{position:fixed;inset:0;overflow:hidden;pointer-events:none}.p{position:absolute;width:3px;height:3px;border-radius:50%;background:#d8caff88;animation:rise linear infinite}
+.ripple{position:fixed;width:8px;height:8px;border:1px solid #d9caffaa;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9;animation:rip .65s ease-out forwards}
+@keyframes in{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes spinr{to{transform:rotate(-360deg)}}
+@keyframes float{50%{transform:translateY(-6px)}}@keyframes drift{50%{transform:translate(28px,-22px) scale(1.12)}}
+@keyframes shine{0%,65%{transform:translateX(-100%)}85%,100%{transform:translateX(100%)}}
+@keyframes rise{from{transform:translateY(110vh);opacity:0}15%{opacity:.7}to{transform:translateY(-10vh);opacity:0}}
+@keyframes rip{to{width:250px;height:250px;opacity:0}}
+@media(max-width:420px){.wrap{padding:12px}.card{padding:23px 14px 18px}.emblem{height:105px}.ring{width:92px;height:92px}.dragon{font-size:50px}h1{font-size:27px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-<main class="wrap">
-<section class="card">
-<div class="profile">
- <div class="avatar"><img id="avatarImg" src="profile.jpg" alt="Foto profil" onerror="this.style.display='none';document.getElementById('avatarText').style.display='block'"><span id="avatarText" style="display:none">EC</span></div>
- <h1 id="name">Empire Czyng</h1>
- <p class="bio" id="bio">Semua link saya ada di sini. Pilih platform yang ingin kamu kunjungi.</p>
-</div>
-<div class="links" id="links"></div>
-<div class="footer">© <span id="year"></span> Empire Czyng</div>
-</section>
-</main>
+<div class="orb o1"></div><div class="orb o2"></div><div class="particles"></div>
+<main class="wrap"><section class="card">
+  <div class="hero">
+    <div class="emblem"><div class="ring"></div><div class="dragon">龍</div></div>
+    <div class="avatar">HZ</div>
+    <h1>Huo Zhao</h1>
+    <div class="sub">Official Links</div>
+    <p class="desc">Ikuti semua kanal resmi Huo Zhao melalui tombol di bawah.</p>
+  </div>
+  <nav class="links" aria-label="Link resmi">
+    <a class="link y" href="https://www.youtube.com/@huozhao1" target="_blank" rel="noopener">
+      <span class="icon">▶</span><span class="txt"><strong>YouTube</strong><small>@huozhao1</small></span><span class="arrow">↗</span>
+    </a>
+    <a class="link t" href="https://www.tiktok.com/@huozhao5?_r=1&_t=ZS-99hxea0r8NA" target="_blank" rel="noopener">
+      <span class="icon">♪</span><span class="txt"><strong>TikTok</strong><small>@huozhao5</small></span><span class="arrow">↗</span>
+    </a>
+    <a class="link w" href="https://whatsapp.com/channel/0029Vb5dhRcJ93weFEQ1Tm3z" target="_blank" rel="noopener">
+      <span class="icon">◉</span><span class="txt"><strong>Saluran WhatsApp</strong><small>Gabung ke saluran WhatsApp</small></span><span class="arrow">↗</span>
+    </a>
+  </nav>
+  <div class="note">Tekan tombol untuk membuka kanal resmi</div>
+</section></main>
+<div id="ripples"></div>
 <script>
-const profile={
- name:"Empire Czyng",
- bio:"Semua link saya ada di sini. YouTube, TikTok, dan Saluran WhatsApp."
-};
-const icons={
- youtube:`<svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.9V8.1l6.8 3.9-6.8 3.9Z"/></svg>`,
- tiktok:`<svg viewBox="0 0 24 24"><path d="M19.6 6.1a5.8 5.8 0 0 1-3.5-3.5h-3.2v13.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .7 0 1 .2v-3.3a6.1 6.1 0 1 0 4.9 5.9V9.2a9 9 0 0 0 5.3 1.7V7.7a5.7 5.7 0 0 1-1.8-1.6Z"/></svg>`,
- instagram:`<svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.5 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>`,
- facebook:`<svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg>`,
- whatsapp:`<svg viewBox="0 0 24 24"><path d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.3 21.8l5.2-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a7.9 7.9 0 1 1 7.2 3.9Zm4.3-5.8c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.9-.1.2-.2.2-.4.1-.2-.1-.9-.3-1.7-1-.6-.5-1-1.1-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.6 2.5 4 3.4.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.2-.5 1.3-1 .2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>`,
- web:`<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15 15 0 0 0-1.2-5A8.1 8.1 0 0 1 18.9 11ZM12 4c.9 1.1 1.7 3.5 1.9 7h-3.8c.2-3.5 1-5.9 1.9-7ZM9.3 6a15 15 0 0 0-1.2 5h-3a8.1 8.1 0 0 1 4.2-5ZM5.1 13h3a15 15 0 0 0 1.2 5 8.1 8.1 0 0 1-4.2-5ZM12 20c-.9-1.1-1.7-3.5-1.9-7h3.8c-.2 3.5-1 5.9-1.9 7Zm2.7-2a15 15 0 0 0 1.2-5h3a8.1 8.1 0 0 1-4.2 5Z"/></svg>`
-};
-const links=[
- {title:"YouTube",subtitle:"Channel YouTube",url:"https://www.youtube.com/@huozhao1",icon:"youtube"},
- {title:"TikTok",subtitle:"Follow di TikTok",url:"https://www.tiktok.com/@huozhao5?_r=1&_t=ZS-99hqoemv0cf",icon:"tiktok"},
- {title:"Saluran WhatsApp",subtitle:"Saluran WhatsApp",url:"https://whatsapp.com/channel/0029Vb5dhRcJ93weFEQ1Tm3z",icon:"whatsapp"}
-];
-document.getElementById("name").textContent=profile.name;
-document.getElementById("bio").textContent=profile.bio;
-document.getElementById("year").textContent=new Date().getFullYear();
-const box=document.getElementById("links");
-links.forEach(x=>{
- const a=document.createElement("a");a.className="link";a.href=x.url;a.target="_blank";a.rel="noopener noreferrer";
- a.innerHTML=`<div class="icon">${icons[x.icon]}</div><div class="link-main"><div class="link-title">${x.title}</div><div class="link-sub">${x.subtitle}</div></div><div class="arrow">›</div>`;
- box.appendChild(a);
-});
+const box=document.querySelector('.particles');
+for(let i=0;i<28;i++){let p=document.createElement('i');p.className='p';p.style.left=Math.random()*100+'%';p.style.animationDuration=6+Math.random()*9+'s';p.style.animationDelay=-Math.random()*12+'s';box.appendChild(p)}
+document.querySelectorAll('.link').forEach(a=>a.addEventListener('click',e=>{let r=document.createElement('i');r.className='ripple';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),700)}));
 </script>
 </body>
 </html>
