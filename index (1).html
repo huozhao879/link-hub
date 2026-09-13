@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>Empire Czyng — Links</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;min-height:100vh;color:#fff;
+ font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ background:
+ radial-gradient(circle at 50% -10%,rgba(255,255,255,.10),transparent 30%),
+ radial-gradient(circle at 10% 90%,rgba(120,120,120,.08),transparent 30%),
+ #030303;
+ display:flex;justify-content:center;padding:32px 14px;overflow-x:hidden;
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.025),transparent 70%);animation:shine 7s linear infinite}
+.wrap{width:min(560px,100%);animation:rise .8s ease both}
+.card{
+ position:relative;overflow:hidden;padding:34px 20px 22px;border-radius:30px;
+ background:linear-gradient(145deg,rgba(24,24,24,.92),rgba(7,7,7,.96));
+ border:1px solid rgba(255,255,255,.13);
+ box-shadow:0 30px 90px rgba(0,0,0,.75),inset 0 1px rgba(255,255,255,.06);
+ backdrop-filter:blur(18px)
+}
+.card:after{content:"";position:absolute;width:230px;height:230px;right:-120px;top:-130px;border-radius:50%;background:rgba(255,255,255,.06);filter:blur(5px)}
+.profile{text-align:center;position:relative;z-index:1}
+.avatar{
+ width:112px;height:112px;border-radius:50%;margin:0 auto 16px;
+ display:grid;place-items:center;font-size:36px;font-weight:900;letter-spacing:-2px;
+ background:linear-gradient(145deg,#292929,#090909);
+ border:2px solid rgba(255,255,255,.85);
+ box-shadow:0 0 0 5px rgba(255,255,255,.04),0 18px 45px rgba(0,0,0,.7);
+ overflow:hidden;animation:float 4s ease-in-out infinite
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+h1{margin:5px 0 6px;font-size:28px;letter-spacing:-.7px}
+.bio{margin:0 auto 24px;color:#aaa;line-height:1.55;font-size:14px;max-width:430px}
+.links{display:grid;gap:13px;position:relative;z-index:1}
+.link{
+ position:relative;text-decoration:none;color:#fff;display:flex;align-items:center;gap:14px;
+ padding:15px 16px;border-radius:18px;background:rgba(255,255,255,.055);
+ border:1px solid rgba(255,255,255,.10);
+ box-shadow:0 8px 24px rgba(0,0,0,.22);
+ transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease;
+ animation:slide .55s ease both
+}
+.link:nth-child(2){animation-delay:.08s}.link:nth-child(3){animation-delay:.16s}.link:nth-child(4){animation-delay:.24s}.link:nth-child(5){animation-delay:.32s}
+.link:before{content:"";position:absolute;inset:0;border-radius:18px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);transform:translateX(-110%);transition:.5s}
+.link:hover{transform:translateY(-4px) scale(1.01);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.24);box-shadow:0 14px 35px rgba(0,0,0,.42)}
+.link:hover:before{transform:translateX(110%)}
+.icon{width:45px;height:45px;flex:0 0 45px;border-radius:14px;display:grid;place-items:center;background:#111;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px rgba(255,255,255,.08)}
+.icon svg{width:24px;height:24px;fill:#fff}
+.link-main{min-width:0;flex:1;text-align:left}.link-title{font-weight:750;font-size:15px}.link-sub{color:#888;font-size:12px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arrow{color:#777;font-size:26px;transition:.25s}.link:hover .arrow{color:#fff;transform:translateX(4px)}
+.footer{text-align:center;margin-top:22px;color:#555;font-size:11px;letter-spacing:.4px}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes slide{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes shine{0%{transform:translateX(-30%)}100%{transform:translateX(30%)}}
+@media(max-width:480px){body{padding:14px 9px}.card{padding:27px 13px 19px;border-radius:24px}h1{font-size:25px}.avatar{width:100px;height:100px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="card">
+<div class="profile">
+ <div class="avatar"><img id="avatarImg" src="profile.jpg" alt="Foto profil" onerror="this.style.display='none';document.getElementById('avatarText').style.display='block'"><span id="avatarText" style="display:none">EC</span></div>
+ <h1 id="name">Empire Czyng</h1>
+ <p class="bio" id="bio">Semua link saya ada di sini. Pilih platform yang ingin kamu kunjungi.</p>
+</div>
+<div class="links" id="links"></div>
+<div class="footer">© <span id="year"></span> Empire Czyng</div>
+</section>
+</main>
+<script>
+const profile={
+ name:"Empire Czyng",
+ bio:"Semua link saya ada di sini. YouTube, TikTok, dan Saluran WhatsApp."
+};
+const icons={
+ youtube:`<svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.9V8.1l6.8 3.9-6.8 3.9Z"/></svg>`,
+ tiktok:`<svg viewBox="0 0 24 24"><path d="M19.6 6.1a5.8 5.8 0 0 1-3.5-3.5h-3.2v13.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .7 0 1 .2v-3.3a6.1 6.1 0 1 0 4.9 5.9V9.2a9 9 0 0 0 5.3 1.7V7.7a5.7 5.7 0 0 1-1.8-1.6Z"/></svg>`,
+ instagram:`<svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.5 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>`,
+ facebook:`<svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg>`,
+ whatsapp:`<svg viewBox="0 0 24 24"><path d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.3 21.8l5.2-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a7.9 7.9 0 1 1 7.2 3.9Zm4.3-5.8c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.2-.5.7-.6.9-.1.2-.2.2-.4.1-.2-.1-.9-.3-1.7-1-.6-.5-1-1.1-1.1-1.3-.1-.2 0-.3.1-.4l.3-.3c.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.6 2.5 4 3.4.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.2-.5 1.3-1 .2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>`,
+ web:`<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15 15 0 0 0-1.2-5A8.1 8.1 0 0 1 18.9 11ZM12 4c.9 1.1 1.7 3.5 1.9 7h-3.8c.2-3.5 1-5.9 1.9-7ZM9.3 6a15 15 0 0 0-1.2 5h-3a8.1 8.1 0 0 1 4.2-5ZM5.1 13h3a15 15 0 0 0 1.2 5 8.1 8.1 0 0 1-4.2-5ZM12 20c-.9-1.1-1.7-3.5-1.9-7h3.8c-.2 3.5-1 5.9-1.9 7Zm2.7-2a15 15 0 0 0 1.2-5h3a8.1 8.1 0 0 1-4.2 5Z"/></svg>`
+};
+const links=[
+ {title:"YouTube",subtitle:"Channel YouTube",url:"https://www.youtube.com/@huozhao1",icon:"youtube"},
+ {title:"TikTok",subtitle:"Follow di TikTok",url:"https://www.tiktok.com/@huozhao5?_r=1&_t=ZS-99hqoemv0cf",icon:"tiktok"},
+ {title:"Saluran WhatsApp",subtitle:"Saluran WhatsApp",url:"https://whatsapp.com/channel/0029Vb5dhRcJ93weFEQ1Tm3z",icon:"whatsapp"}
+];
+document.getElementById("name").textContent=profile.name;
+document.getElementById("bio").textContent=profile.bio;
+document.getElementById("year").textContent=new Date().getFullYear();
+const box=document.getElementById("links");
+links.forEach(x=>{
+ const a=document.createElement("a");a.className="link";a.href=x.url;a.target="_blank";a.rel="noopener noreferrer";
+ a.innerHTML=`<div class="icon">${icons[x.icon]}</div><div class="link-main"><div class="link-title">${x.title}</div><div class="link-sub">${x.subtitle}</div></div><div class="arrow">›</div>`;
+ box.appendChild(a);
+});
+</script>
+</body>
+</html>
